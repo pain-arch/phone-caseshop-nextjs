@@ -2,8 +2,10 @@ import { Icons } from "@/components/icons";
 import MaxWithWrapper from "@/components/MaxWithWrapper";
 import Phone from "@/components/Phone";
 import { Reviews } from "@/components/Reviews";
+import { buttonVariants } from "@/components/ui/button";
 
-import { Check, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -208,6 +210,12 @@ export default function Home() {
             </li>
           </ul>
          
+          <div className="flex justify-center">
+            <Link className={buttonVariants({
+              size: 'lg',
+              className: 'mx-auto mt-8 '
+            })} href='/configure/upload'>Create your case now <ArrowRight className="h-4 w-4 ml-1.5"/></Link>
+          </div>
         </MaxWithWrapper>
       </section>
 
